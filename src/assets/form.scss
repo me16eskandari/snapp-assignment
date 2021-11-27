@@ -1,0 +1,71 @@
+.form {
+
+    &.has-bg {
+        background-color: darken($bgColor, 5%);
+        border-radius: 5px;
+        padding: 10px 5px;
+        width: 100%;
+        display: flex;
+        margin: 10px 0;
+
+        @media (max-width: 768px) {
+            width: calc(100% - 10px);
+            flex-direction: column;
+        }
+    }
+
+    &.two-column {
+        flex-wrap: wrap;
+
+        .input,
+        .actions {
+            flex: 0 0 50%;
+            padding: 0 5px;
+        }
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+
+        label {
+            font-size: .8em;
+        }
+
+        input,
+        select {
+            font-size: 1em;
+            padding: .3em .5em;
+            margin: .2em 0;
+        }
+
+        .error {
+            color: #f58787;
+            font-size: .8em;
+        }
+    }
+
+    div.actions {
+        margin-bottom: 1em;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        button {
+            background-color: $secondaryColor;
+            border: none;
+            margin-left: 5px;
+            font-size: 1em;
+            padding: .4em .5em;
+            color: $bgColor;
+            min-width: 7em;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: .5;
+                cursor: default;
+            }
+        }
+    }
+}

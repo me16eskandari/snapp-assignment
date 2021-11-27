@@ -1,0 +1,53 @@
+.table-filter {
+    display: flex;
+    width: 100%;
+
+    div.input {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px 5px 0;
+
+        input,
+        select {
+            font-size: 1em;
+            padding: .5em;
+        }
+    }
+
+    div.actions {
+        padding: 1.55em 0 5px 0;
+
+        button {
+            background-color: $secondaryColor;
+            border: none;
+            margin-left: 5px;
+            font-size: 1em;
+            padding: .6em .5em;
+            color: $bgColor;
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0 10px;
+
+        div.input {
+            padding-right: 0;
+        }
+
+        div.actions {
+            display: flex;
+            padding-top: 0;
+
+            button {
+                flex: 1;
+            }
+        }
+    }
+}
